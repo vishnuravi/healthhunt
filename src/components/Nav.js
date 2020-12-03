@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
 	return (
@@ -7,17 +8,19 @@ const Nav = () => {
 				<header className="header">
 					<div className="nav">
 						<div className="logo">
-							<img src={process.env.PUBLIC_URL + '/android-chrome-192x192.png'} alt="" />
+							<Link to="/">
+								<img src={process.env.PUBLIC_URL + '/android-chrome-192x192.png'} alt="" />
+							</Link>
 						</div>
 						<ul className="d-none d-md-block">
-							<li>Challenges</li>
-							<li>Innovation Consulation</li>
-							<li>Events</li>
+							<li><Link to="/challenges">Challenges</Link></li>
+							<li><Link to="/consultation">Innovation Consultation</Link></li>
+							<li><Link to="/events">Events</Link></li>
 						</ul>
 					</div>
 					<div className="auth_button">
-						<button className="login_button">Log in</button>
-						<button className="signup_button">Sign up</button>
+						<Link to="/signin"><button className="login_button">Sign in</button></Link>
+						<Link to="/register"><button className="signup_button">Register</button></Link>
 					</div>
 				</header>
 			</div>

@@ -1,5 +1,7 @@
 import React from 'react';
+import Nav from './Nav';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
+import { Link } from "react-router-dom";
 import firebase from 'firebase';
 
 const SignIn = () => {
@@ -11,16 +13,19 @@ const SignIn = () => {
         // We will display Google and Facebook as auth providers.
         signInOptions: [
             firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-            firebase.auth.FacebookAuthProvider.PROVIDER_ID
+            firebase.auth.EmailAuthProvider.PROVIDER_ID
         ]
     };
 
     return (
-        <div>
-            <h1>HHunt</h1>
-            <p>Please sign-in:</p>
-            <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
-        </div>
+        <>
+            <Nav />
+            <div className="text-center mt-4">
+                <h1>Sign In</h1>
+                <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} className="mt-4" />
+                <p className="lead">Need an account? <Link to="/register">Sign up here.</Link></p>
+            </div>
+        </>
     )
 }
 
