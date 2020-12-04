@@ -38,9 +38,10 @@ const Products = () => {
 	return (
 		<>
 			{ showWelcome &&
-				<Alert className="mt-2 p-4" onClose={() => setShowWelcome(false)} style={{ border: '0.5px solid #333333' }} dismissible>
-					<p style={{ color: "gray", fontSize: "2em" }}>Hi there!</p>
-					<p style={{ color: "gray", fontSize: "1.75em" }}>We take health implementation science seriously.</p>
+				<Alert className="mt-2 p-4" onClose={() => setShowWelcome(false)} style={{ background: '#FFFDFD',  boxShadow: '0 1px 1px 0 rgba(0, 0, 0, 0.05)' }} dismissible>
+					<img src={process.env.PUBLIC_URL + '/health-innovation-splash.png'} width="100%" alt="" className="mb-4 mt-4" style={{ borderRadius: '10px'}} />
+					<p style={{ color: "#00A8E8", fontSize: "2em" }}>Hi there!</p>
+					<p style={{ color: "#6f6f6f", fontSize: "1.75em" }}>We take health implementation science <span style={{color: '#00A8E8', textDecoration: 'underline' }}>seriously</span>.</p>
 					<p className="lead">Are you a healthcare provider preparing for your next innovation programme?
 					Or perhaps you have mastered the secrets of successful service redesign?
 				Perhaps you have a clever API you want the world to know about?</p>
