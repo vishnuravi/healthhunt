@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Community = (props) => {
 	return (
@@ -12,7 +13,7 @@ const Community = (props) => {
 					))}
 				</div>
 				<footer>
-					<p>Join our community</p>
+					<p><Link to="/register">Join our community</Link></p>
 				</footer>
 			</div>
 			<h4>Featured Solution</h4>
