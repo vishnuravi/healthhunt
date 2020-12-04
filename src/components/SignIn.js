@@ -1,5 +1,4 @@
 import React from 'react';
-import Nav from './Nav';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import firebase from 'firebase';
 
@@ -15,13 +14,7 @@ const SignIn = () => {
     };
 
     return (
-        <>
-            <Nav />
-            <div className="text-center mt-4">
-                <h1>Sign In</h1>
-                <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} className="mt-4" />
-            </div>
-        </>
+        <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} className="mt-4" />
     )
 }
 

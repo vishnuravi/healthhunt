@@ -13,7 +13,7 @@ const Community = (props) => {
 					))}
 				</div>
 				<footer>
-					<p><Link to="/register">Join our community</Link></p>
+					<p><Link to="/signin">Join our community</Link></p>
 				</footer>
 			</div>
 			<h4>Featured Article</h4>
