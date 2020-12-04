@@ -23,7 +23,17 @@ const Community = (props) => {
 						<a href="https://www.nature.com/articles/s41746-018-0059-8">Beyond “implementation”: digital health innovation and service design</a>
 					</span>
 				</div>
-				<div className="background_image"></div>
+				<div className="background_image_article"></div>
+			</div>
+			<h4>Featured Book</h4>
+			<div className="sponsored_container">
+				<div className="sponsored_message">
+					<span>
+						<a href="https://mitpress.mit.edu/books/health-design-thinking">Health Design Thinking:
+Creating Products and Services for Better Health</a>
+					</span>
+				</div>
+				<div className="background_image_book"></div>
 			</div>
 		</div>
 	);

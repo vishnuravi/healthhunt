@@ -7,7 +7,7 @@ function Newsletter() {
 			<div className="newsletter_container">
 				<div className="signup_container">
 					<span className="signup_message">
-						Keep up to date with the latest innovations in health tech 👇
+						Keep up to date with the latest innovations in health tech <span role="img" aria-label="down-arrow">👇</span>
 					</span>
 					<form>
 						<input

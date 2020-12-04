@@ -7,7 +7,7 @@ const Product = (product) => {
 				<img src={product.img} alt={product.name} />
 			</div>
 			<div>
-				<h3><a href={product.url} target="_blank">{product.name}</a></h3>
+				<h3><a href={product.url} target="_blank" rel="noopener noreferrer">{product.name}</a></h3>
 				<p className="product_description">{product.description}</p>
 				<span>
 					{product.tags.map(tag => (

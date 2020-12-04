@@ -1,7 +1,10 @@
 import React from 'react';
 import Products from "./Products";
 import Sidebar from "./Sidebar";
-import ComingSoon from "./ComingSoon";
+import GetInvolved from "./GetInvolved";
+import Design from "./Design";
+import Data from "./Data";
+import Footer from "./Footer";
 import { Tabs, Tab } from 'react-bootstrap';
 
 import Nav from "./Nav";
@@ -18,13 +21,13 @@ const Home = () => {
                                 <Products />
                             </Tab>
                             <Tab eventKey="design" title="Design">
-                                <ComingSoon />
+                                <Design />
                             </Tab>
-                            <Tab eventKey="data" title="Data &amp; Interoperability">
-                                <ComingSoon />
+                            <Tab eventKey="data" title="Data &amp; Interoperability" disabled>
+                                <Data />
                             </Tab>
                             <Tab eventKey="getinvolved" title="Get Involved">
-                                <ComingSoon />
+                                <GetInvolved />
                             </Tab>
                         </Tabs>
                     </div>
@@ -34,6 +37,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </>
     )
 }
