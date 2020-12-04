@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Product from "./Product";
 import firebase from "firebase";
-import { Jumbotron, Button } from "react-bootstrap";
+import { Alert, Button } from "react-bootstrap";
 
 const Products = () => {
 
@@ -33,18 +33,22 @@ const Products = () => {
 		fetchProducts();
 	}, []);
 
+	const [showWelcome, setShowWelcome] = useState(true);
+
 	return (
 		<>
-			<Jumbotron className="mt-3">
-				<p style={{ color: "gray", fontSize: "2.5em"}}>Hi there!</p>
-				<p style={{ color: "gray", fontSize: "2em" }}>We take health implementation science seriously.</p>
-				<p className="lead">Are you a healthcare provider preparing for your next innovation programme?
-				Or perhaps you have mastered the secrets of successful service redesign?
+			{ showWelcome &&
+				<Alert className="mt-2 p-4" onClose={() => setShowWelcome(false)} style={{ border: '0.5px solid #333333' }} dismissible>
+					<p style={{ color: "gray", fontSize: "2em" }}>Hi there!</p>
+					<p style={{ color: "gray", fontSize: "1.75em" }}>We take health implementation science seriously.</p>
+					<p className="lead">Are you a healthcare provider preparing for your next innovation programme?
+					Or perhaps you have mastered the secrets of successful service redesign?
 				Perhaps you have a clever API you want the world to know about?</p>
-				<Button variant="outline-dark">Join our community of H-hunters!</Button>
-			</Jumbotron>
+					<Button variant="outline-dark">Join our community of H-hunters!</Button>
+				</Alert>
+			}
 
-			<h4 className="mt-4">Featured Innovations</h4>
+			<h4 className="mt-4">Latest Innovations</h4>
 
 			{data.map(product => (
 				<Product {...product} upvote={upvote} />
