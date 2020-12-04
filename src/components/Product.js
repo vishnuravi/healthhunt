@@ -15,11 +15,10 @@ const Product = (product) => {
 					))}
 				</span>
 			</div>
-			<div className="votes">
+			<div className="votes" onClick={() => product.upvote(product.id)}>
 				<span className="angle_up">▲</span>
 				<button
 					className="votes_count"
-					onClick={() => product.upvote(product.id)}
 				>
 					{product.votes}
 				</button>

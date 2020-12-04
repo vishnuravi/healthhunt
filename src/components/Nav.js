@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import SignInModal from "./SignInModal";
+
+
 
 const Nav = () => {
+
+	const [modalShow, setModalShow] = useState(false);
+
 	return (
 		<div>
 			<div className="header_container">
@@ -14,10 +20,16 @@ const Nav = () => {
 						</div>
 					</div>
 					<div className="auth_button">
-						<Link to="/signin"><button className="signup_button">Sign In</button></Link>
+						<button onClick={() => setModalShow(true)} className="signup_button">Sign In</button>
 					</div>
 				</header>
 			</div>
+
+			<SignInModal
+				show={modalShow}
+				onHide={() => setModalShow(false)}
+			/>
+			
 		</div>
 	);
 }
